@@ -8,6 +8,10 @@
 	<array>
 		<string>asa</string>
 	</array>
+	<key>foldingStartMarker</key>
+	<string>(?i)^\s*(Public|Private)?\s*(Class|Function|Sub|Property)\s*([a-zA-Z_]\w*)\s*(\(.*\)\s*)?$</string>
+	<key>foldingStopMarker</key>
+	<string>(?i)^\s*End (Class|Function|Sub|Property)\s*$</string>
 	<key>keyEquivalent</key>
 	<string>^~A</string>
 	<key>name</key>
@@ -44,75 +48,37 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*((?i:function|sub))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?</string>
+			<string>^\s*((?i:public |private )?(?i:function|sub))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?</string>
 			<key>name</key>
 			<string>meta.function.asp</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(^[ \t]+)?(?=')</string>
-			<key>beginCaptures</key>
+			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.whitespace.comment.leading.asp</string>
+					<string>punctuation.definition.comment.asp</string>
 				</dict>
 			</dict>
-			<key>end</key>
-			<string>(?!\G)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>'</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.comment.asp</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>\n</string>
-					<key>name</key>
-					<string>comment.line.apostrophe.asp</string>
-				</dict>
-			</array>
+			<key>match</key>
+			<string>(').[^%&gt;]*$[\n|\r\n]?</string>
+			<key>name</key>
+			<string>comment.line.apostrophe.asp</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>(^[ \t]+)?(?=REM )</string>
-			<key>beginCaptures</key>
+			<key>captures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.whitespace.comment.leading.asp</string>
+					<string>punctuation.definition.comment.asp</string>
 				</dict>
 			</dict>
-			<key>end</key>
-			<string>(?!\G)</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>begin</key>
-					<string>REM </string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>0</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.comment.asp</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>\n</string>
-					<key>name</key>
-					<string>comment.line.rem.asp</string>
-				</dict>
-			</array>
+			<key>match</key>
+			<string>(REM ).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.rem.asp</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -235,7 +201,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(vbtrue|vbfalse|vbcr|vbcrlf|vbformfeed|vblf|vbnewline|vbnullchar|vbnullstring|vbtab|vbverticaltab|vbbinarycompare|vbtextcomparevbsunday|vbmonday|vbtuesday|vbwednesday|vbthursday|vbfriday|vbsaturday|vbusesystemdayofweek|vbfirstjan1|vbfirstfourdays|vbfirstfullweek|vbgeneraldate|vblongdate|vbshortdate|vblongtime|vbshorttime|vbobjecterror|vbEmpty|vbNull|vbInteger|vbLong|vbSingle|vbDouble|vbCurrency|vbDate|vbString|vbObject|vbError|vbBoolean|vbVariant|vbDataObject|vbDecimal|vbByte|vbArray)\b)</string>
+			<string>(?i:\b(vbtrue|fvbalse|vbcr|vbcrlf|vbformfeed|vblf|vbnewline|vbnullchar|vbnullstring|vbtab|vbverticaltab|vbbinarycompare|vbtextcomparevbsunday|vbmonday|vbtuesday|vbwednesday|vbthursday|vbfriday|vbsaturday|vbusesystemdayofweek|vbfirstjan1|vbfirstfourdays|vbfirstfullweek|vbgeneraldate|vblongdate|vbshortdate|vblongtime|vbshorttime|vbobjecterror|vbEmpty|vbNull|vbInteger|vbLong|vbSingle|vbDouble|vbCurrency|vbDate|vbString|vbObject|vbError|vbBoolean|vbVariant|vbDataObject|vbDecimal|vbByte|vbArray)\b)</string>
 			<key>name</key>
 			<string>support.type.vb.asp</string>
 		</dict>

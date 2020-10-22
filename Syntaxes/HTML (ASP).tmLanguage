@@ -6,36 +6,16 @@
 	<array>
 		<string>asp</string>
 	</array>
+	<key>foldingStartMarker</key>
+	<string>(&lt;(?i:(head|table|div|style|script|ul|ol|form|dl))\b.*?&gt;|\{)</string>
+	<key>foldingStopMarker</key>
+	<string>(&lt;/(?i:(head|table|div|style|script|ul|ol|form|dl))&gt;|\})</string>
 	<key>keyEquivalent</key>
 	<string>^~A</string>
 	<key>name</key>
 	<string>HTML (ASP)</string>
 	<key>patterns</key>
 	<array>
-		<dict>
-			<key>begin</key>
-			<string>&lt;%--</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.begin.asp</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>--%&gt;</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.end.asp</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>comment.block.asp.server</string>
-		</dict>
 		<dict>
 			<key>begin</key>
 			<string>&lt;%=?</string>
@@ -61,20 +41,6 @@
 			<string>source.asp.embedded.html</string>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.comment.asp</string>
-						</dict>
-					</dict>
-					<key>match</key>
-					<string>(').*?(?=%&gt;)</string>
-					<key>name</key>
-					<string>comment.line.apostrophe.asp</string>
-				</dict>
 				<dict>
 					<key>include</key>
 					<string>source.asp</string>

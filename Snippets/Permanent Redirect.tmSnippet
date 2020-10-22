@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>Response.Clear()
+Response.AddHeader "Location", "${1:to}"
+Response.Status = 301
+Response.Write( "${2:Short description of why the client is being redirected.}" )
+Response.End
+${0}</string>
+	<key>name</key>
+	<string>Permanent Redirect</string>
+	<key>scope</key>
+	<string>source.asp</string>
+	<key>tabTrigger</key>
+	<string>r.r</string>
+	<key>uuid</key>
+	<string>0E4EFE89-4901-4550-9114-7AC3B8630557</string>
+</dict>
+</plist>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Comments (ASP)</string>
+	<string>Comments</string>
 	<key>scope</key>
 	<string>source.asp</string>
 	<key>settings</key>
